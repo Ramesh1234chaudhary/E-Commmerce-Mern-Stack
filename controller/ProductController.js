@@ -3,7 +3,7 @@ const Productmodel = require("../models/ProductModels");
 const fs =require('fs')
 const { default: slugify } = require("slugify");
 const categorymodel = require("../models/CategoryModel");
-const orderModel = require("../models/OderModel");
+const orderModel = require("../models/oderModel");
 const braintree  = require('braintree')
 const dotenv = require('dotenv')
 
