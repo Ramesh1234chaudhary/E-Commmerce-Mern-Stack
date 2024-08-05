@@ -25,12 +25,18 @@ app.use('/api/v1/auth',Authroutes);
 app.use('/api/v1/category',CategoryRoutes)
 app.use('/api/v1/product',ProductRoutes)
 
-
-app.get('/', (req, res) => {
-  res.send({
-    message: 'Welcome to the e-comm app',
-  });
+app.get('*', function (req, res) {
+  res.sendFile(path.join(__dirname, './client/build/index.html'));
 });
+
+
+// app.get('/', (req, res) => {
+//   res.send({
+//     message: 'Welcome to the e-comm app',
+//   });
+// });
+
+
 
 const PORT = process.env.PORT || 4500;
 
