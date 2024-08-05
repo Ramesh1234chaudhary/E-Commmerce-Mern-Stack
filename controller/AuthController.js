@@ -1,7 +1,7 @@
 const usermodel = require('../models/userModels');
 const { hashPassword, comparePassword } = require('../helper/Authhelper');
 const JWT = require('jsonwebtoken');
-const orderModel = require('../models/OderModel');
+const orderModel = require('../models/oderModel');
 
 const RegisterController = async (req, res) => {
   try {
