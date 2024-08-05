@@ -7,7 +7,6 @@ const CategoryRoutes= require( './routes/CategoriesRoutes')
 const ProductRoutes= require( './routes/ProductRoutes')
 const path = require('path');
 
-app.use(express.static(path.join(__dirname,'./client/build')));
 
 const cors= require('cors')
 const app = express();
@@ -18,6 +17,7 @@ connectDb();
 app.use(cors())
 app.use(express.json());
 app.use(morgan('dev'));
+app.use(express.static(path.join(__dirname,'./client/build')));
 
 //routes
 
